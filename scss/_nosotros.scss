@@ -1,0 +1,36 @@
+/* separadores */
+.empresa h2{
+    background-color: #363020;
+    color: white;
+    border: 0.3rem solid black;
+}
+
+.contenedorNosotros{
+    @include flex-fila-centrado;
+    flex-direction: row;
+    gap: 20px;
+    text-align:justify;
+
+    img{
+        @include dimencionesIconos(350px, 250px);
+    }
+}
+
+/* carousel */
+#carouselExampleIndicators{
+    width: 100%;
+    margin: 0 auto;
+}
+
+#reverse{
+    flex-direction: row-reverse;
+}
+
+.empresa{
+    margin-top: 0.2rem;
+
+    h2{
+        margin: 0;
+    }
+}
+

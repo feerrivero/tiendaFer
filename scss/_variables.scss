@@ -1,0 +1,37 @@
+// color links
+$color-links: #25291C;
+
+// color hover
+$color-hover: rgb(208,2,27);
+
+// mixin tamaño iconos
+@mixin dimencionesIconos ($ancho, $alto) {
+    width: $ancho;
+    height: $alto;
+}
+
+// mixin propiedades cards
+@mixin propiedadesCards{
+    width: 300px;
+    height: 400px;
+    border: 2px solid black;
+    text-align: center;
+    padding-bottom: 5px;
+    background-color: #A49966;
+    margin: 0.7rem;
+}
+
+// mixin flex-row-center
+@mixin flex-fila-centrado {
+    display: flex;
+    align-items: center;
+}
+
+// color contenedor
+$color-contenedor: #A49966;
+
+//color contenedores separadores
+$color-separadores: #363020;
+
+//color fondo footer
+$color-footer: #C7C7A6;

@@ -1,0 +1,57 @@
+/* Index */
+body main section{
+    background-color: #F4FDD9;
+}
+
+/* Productos ofertas */
+.productos .parrafoProductos{
+    background-color: $color-hover;
+    color: white;
+    border: 0.3rem solid black;
+    grid-area: parrafoProductos;
+    text-align: center;
+    width: 100%;
+    animation-name: ofertas;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+    animation-duration: 5s;
+    animation-delay: 2s;
+}
+
+/* Animacion texto oferta */
+@keyframes ofertas{
+    0%{color: white;
+    background-color:rgb(208,2,27);}
+    50%{color: rgb(208,2,27);
+    background-color: white;}
+    100%{color: white;
+    background-color:rgb(208,2,27);}
+}
+
+/* Cards de productos en ofertas del index*/
+.cards{
+    width: 100%;
+    margin:0;
+    grid-area: cards;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+
+    div{
+        img{
+            height: 295px;
+            width: 295px;
+            align-content: center;  
+        }
+    }
+}
+
+/* Grid cuerpo index */
+ .productos,
+ .productosAll{
+     display:grid;
+     grid-template-columns: 20% 80%;
+     grid-template-areas: 
+     "parrafoProductos parrafoProductos"
+     "menuFiltro cards";
+ }

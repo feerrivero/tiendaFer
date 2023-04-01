@@ -1,0 +1,137 @@
+/* Media queris para pantallas menores de 1275px */
+@media screen and (max-width:1275px) {
+    header{
+        display: grid;
+        grid-template-columns: 30% 40% 30%;
+        grid-template-rows: 280px;
+        grid-template-areas: "logo barra botones";
+
+        .barra{
+            display: flex;
+            flex-direction: column;
+
+            ul{
+                @include flex-fila-centrado;
+                flex-direction: column;
+                justify-content: center;
+            }
+        }
+
+        div{
+            .iniciarSesion,
+            .carrito{
+                @include dimencionesIconos(45px, 45px);
+                align-content: center;
+            }
+        }
+    }
+
+    .cards{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    header, .barra, .botones_header{
+        height: 280px;
+        flex-direction: column;
+    }
+
+    #logo_header{
+        @include flex-fila-centrado;
+        flex-direction: row;
+        justify-content: end;
+
+
+        a{
+            img{
+                height: 5.5rem;
+            }
+        }
+    }
+
+    .botones_header{
+        align-items: flex-start;
+    }
+}
+
+/* Media queris para pantallas menores a 1160px */
+@media screen and (max-width:1160px) {
+    .productos, .productosAll{
+        display:grid;
+        grid-template-columns: 50% 50%;
+        grid-template-areas: 
+        "parrafoProductos parrafoProductos"
+        "cards cards"
+        "menuFiltro menuFiltro";
+    }
+
+    .menuFiltro {
+        grid-area: menuFiltro;
+        margin: auto;
+        font-size: 2rem;
+        width: 650px;
+        align-items: center;
+
+        div{
+            .tipoDePrenda{
+                @include flex-fila-centrado;
+                justify-content: space-between;
+
+                li{
+                    padding: 2rem;
+                    margin: auto;
+                }
+            }
+        }
+    }
+}
+
+/* Media queris para pantallas menores a 770px */
+@media screen and (max-width:770px){
+    .contenedorNosotros, #reverse{
+        flex-direction: column;
+    }
+    .contenedorNosotros img{
+        width: 100%;
+    }
+}
+
+/* Media queris para pantallas menores a 685px */
+@media screen and (max-width:685px) {
+    .productos, .cards{
+        @include flex-fila-centrado;
+        flex-direction: column;
+        justify-items: center;
+    }
+    .menuFiltro {
+        display: none;
+
+        div{
+            .tipoDePrenda{
+                display: none;
+            }
+        }
+    }
+
+.redesSociales div{
+    display: flex;
+    flex-direction: column;
+}
+
+header .barra .menu li{ 
+    font-size: 1.5rem;
+    padding: 0.2rem;
+}
+}
+
+@media screen and (max-width:530px){
+    footer{
+        display: grid;
+        grid-template-rows: 200px 370px;
+        grid-template-columns: repeat(3, 1fr);
+
+        .imagenfooter{
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}

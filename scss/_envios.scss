@@ -1,0 +1,43 @@
+/* Pestaña envios */
+
+.envios{
+
+    div{
+
+        h1{
+            @extend .colorMarronContenedores;
+            color: white;
+            font-style: italic;
+            text-align: center;
+        }
+
+    }
+
+    h2{
+        color:$color-separadores;
+        background-color: $color-footer;
+    }
+
+    form fieldset #codigoPostalButton{
+        width: 150px;
+    }
+
+    form fieldset #botonFormulario{
+        display: flex;
+        justify-content: center;
+        justify-items: center;
+
+        button{
+            width: 25%;
+
+            &:hover{
+                background-color: $color-hover;
+            }
+        }
+    }
+}
+
+h2 {
+    font-style: italic;
+    text-align: center;
+}

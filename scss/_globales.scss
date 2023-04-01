@@ -1,0 +1,234 @@
+/*general*/
+html {
+    margin: 0px;
+    padding: 0px;
+    font-size: 62.5%;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 1rem;
+}
+
+/*links*/
+a{
+    text-decoration: none;
+    color: $color-links;
+}
+
+/*header*/
+header {
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    grid-template-rows: 115px;
+    grid-template-areas: "logo barra botones";
+    height: 7rem;
+
+    div{
+        .iniciarSesion, 
+        .carrito{
+            @include dimencionesIconos(30px, 30px); 
+        }
+    }
+
+/*propiedades barra header*/
+
+    .barra{
+        grid-area: barra;
+        @include flex-fila-centrado;
+        justify-content: center;
+        background-image: linear-gradient(to right, white, $color-contenedor);
+
+        .menu{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            li{
+                list-style: none;
+                font-size: 2rem;
+                padding: 0.3rem;
+
+                a{
+                    color: $color-links;
+
+                    &:hover{
+                        background-color: $color-hover;
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+
+    .botones_header{
+        grid-area: botones;
+        @include flex-fila-centrado;
+        justify-content: space-evenly;
+        background-color: $color-contenedor;
+    }
+}
+
+/*logo header*/
+#logo_header{
+    grid-area: logo;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+
+    a{
+        @include flex-fila-centrado;
+        justify-content: end;
+
+        img{
+            height: 7rem;  
+        }
+    }
+}
+
+.productos,.envios,.productosAll{
+    border-top: 0.2rem solid black;
+    padding: 1rem
+}
+
+/*propiedades cards*/
+.productos .cards div,
+.productosAll .cards div{
+    @include propiedadesCards;
+
+    a{
+        color: white;
+        background-color: $color-links;
+        padding: 5px;
+        
+        &:hover{
+            background-color: $color-hover;
+        }
+    }
+
+    h2{
+        font-size: 1.2rem;
+    }
+
+    h3{
+        font-size: 1.5rem;
+    }
+}
+
+/* Menu filtro productos*/
+
+.menuFiltro {
+    border: 2px solid black;
+    height: 7.5rem;
+    width: 220px; 
+    background-color: $color-contenedor;
+    grid-area: menuFiltro;
+    margin: 4rem 1rem;
+    font-size: 1.5rem;
+    font-style: italic;
+
+    div{
+        ul li{
+            list-style: none;
+        }
+
+        .categorias ul li a{
+            color: white;
+            font-size: 1rem;
+        }
+    }
+}
+
+/* Footer*/
+footer{
+    border-top: 0.2rem solid black;
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: 
+    "laEmpresa contacto redesSociales"
+    "imagenFooter imagenFooter imagenFooter"
+    ;
+    justify-items: center;
+    background-color: $color-footer;
+
+    .laEmpresa{
+        /*footer la empresa*/
+        grid-area: laEmpresa;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+
+        a{
+            text-align: center;
+        }
+    }
+
+    .contacto{
+        /*footer contacto*/
+        grid-area: contacto;
+        @include flex-fila-centrado;
+        flex-direction: column;
+        justify-content: flex-start;
+
+        p{
+            /* Footer horario de contacto */
+            margin: 0px;
+            text-align: center;
+        }
+
+        h3{
+            /* Footer horario de contacto */
+            margin: 0px;
+            text-align: center;
+        }
+    }
+
+
+    .redesSociales{
+        /*seccion redes sociales footer*/
+        grid-area: redesSociales;
+        @include flex-fila-centrado;
+        flex-direction: column;
+        justify-content: flex-start;
+
+        div{
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+    .imagenfooter{
+        /*logo footer*/
+        grid-area: imagenFooter;
+        @include flex-fila-centrado;
+        justify-content: space-around;
+
+        a{
+            img{
+                height: 70px;
+            }
+        }
+
+        p{
+            /* Footer parrafo */
+            padding: 1.5rem;
+        }
+    }
+
+    .flechaIrArriba{
+        a{
+            img{
+                height: 60px;
+            }
+        }
+    }
+
+    div{
+        h3{
+            text-align: center;
+        }
+    }
+}
+
+.colorMarronContenedores{
+    background-color: #363020;
+}

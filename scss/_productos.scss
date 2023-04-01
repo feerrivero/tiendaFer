@@ -1,0 +1,35 @@
+/* Pestaña .productos seccion*/
+.productosAll{
+    .parrafoProductos{
+        background-color: #363020;
+        color: white;
+        border: 0.3rem solid black;
+        grid-area: parrafoProductos;
+        text-align: center;
+
+        h1{
+            font-size: 2rem;
+        }
+    }
+
+    .cards{
+
+        div{
+            @include propiedadesCards;
+
+            a{
+                color: white;
+                background-color: $color-links;
+                padding: 5px;
+
+                &:hover{
+                    background-color: $color-hover;
+                }
+            }
+
+            h2{
+                font-size: 1.2rem;
+            }
+        }
+    }
+}

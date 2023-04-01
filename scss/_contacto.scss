@@ -1,0 +1,68 @@
+/* Pestaña contacto, formulario */
+main form fieldset{
+    color: #C7C7A6;
+}
+
+.envios h1{
+    color:$color-separadores;
+    font-style: italic;
+    text-align: center;
+    background-color: $color-footer;
+}
+
+/* Formulario */
+form{
+    font-style: italic;
+    @extend .colorMarronContenedores;
+    padding: 1rem;
+
+    input{
+        margin: 0.5rem;
+    }
+
+    fieldset{
+        legend,
+        p,
+        label{
+            color:white;
+            text-align: center;
+        }
+
+        label{
+            display: flex;
+            margin: auto;
+            text-align: center;
+            justify-content: center;
+
+        }
+
+        #seleccionSexo{
+            display:flex;
+            justify-items: center;
+        }
+
+        label .form-control{
+            width: 25px;
+            height: 25px;
+            background-color: white;
+
+            &:checked{
+                background-color: $color-hover;
+            }
+        }
+        
+        #botonFormulario{
+            display: flex;
+            justify-content: center;
+            justify-items: center;
+
+            button{
+                width: 25%;
+
+                &:hover{
+                    background-color: $color-hover;
+                }
+            }
+        }
+    }
+}
