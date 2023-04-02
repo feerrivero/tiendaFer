@@ -18,12 +18,23 @@ function costoEnvio (){
 
     let codigoPostal = parseInt ( prompt ("Ingresá tu codigo posta y descubrí si el envío es gratis."));
 
-    if ((codigoPostal == 1665) || (codigoPostal == 1663)) {
-        alert ("¡El envío es gratis!");
-    } 
+    if ((codigoPostal != null) && (codigoPostal != "")){
 
-    else { alert ("¡Si tu compra supera los $25000, te lo enviamos gratis!")};
-   
-}
+        if ((codigoPostal == 1665) || (codigoPostal == 1663)) {
+            alert ("¡El envío es gratis!");
+        } 
+    
+        else { 
+            alert ("¡Si tu compra supera los $25000, te lo enviamos gratis!");
+        }    
+
+    }
+
+    else {
+
+        alert ("¡No hay problema, podrás descubrir el costo de envio más tardes!");}
+
+    }
+
 
 costoEnvio();
