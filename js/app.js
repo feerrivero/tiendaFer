@@ -9,8 +9,6 @@ if (preguntaNovedades == true){
     if ((correo != null) && (correo != "")) {
         alert ("¡Te enteraras de nuestras novedades antes que nadie!");}
 
-    else { alert ("No hay problema. Siempre podrás encontrar las mejores ofertas en nuestra web.")};
+    else { alert ("¡No hay problema! Siempre podrás encontrar las mejores ofertas en nuestra web.")};
 
-else { alert ("No hay problema. Siempre podrás encontrar las mejores ofertas en nuestra web.")}; 
-
-};
+} else { alert ("¡No hay problema! Siempre podrás encontrar las mejores ofertas en nuestra web.")}; 
